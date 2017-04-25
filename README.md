@@ -13,6 +13,34 @@
 
 ### Name Spaces
 
+Packages are used to organize files or public types to avoid type conflicts. Package constructs can be mapped to a file system.
+    
+```java 
+System.Security.Cryptography.AsymmetricAlgorithm aa; //may be replaced:
+import System.Security.Crypography; 
+class xxx { ... AsymmetricAlgorithm aa; ... }
+```
+
+There is no alias for packages. You have to use import statement or fully-qualified name to mention the specific type.
+
+```java
+pacakge N1.N2;
+class A {}
+class B {}
+or
+package N1.N2;
+class A {}
+
+//another source file
+package N1.N2;
+class B {}
+```
+Package cannot be nested. One source file can only have one package statement.
+
+***
+
+    
+
 ### Types
 
 ### Classes
