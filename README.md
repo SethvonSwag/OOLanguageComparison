@@ -164,27 +164,40 @@ public class User {
 ```
 
 ### Interfaces/Protocols
+-Devun
 
 ### Inheritance/Extension
+-Devun
 
 ### Reflection
+-Devun
 
 ### Memory Management
+-Seth
 
 ### Comparisons of References and Values
+-Seth
 
 ### Null/Nil References
+-Devun
 
 ### Errors and Exception Handling
+-Seth
 
 ### Lambda Expressions, Closures, or Functions as Types
+-Devun
 
 ### Implementation of Listeners and Event Handlers
+-Seth
 
 ### Singleton
+-Devun
 
 ### Procedural Programming
+-Devun
 
 ### Functional Programming
+-Seth
 
 ### Multitheading
+-Devun
