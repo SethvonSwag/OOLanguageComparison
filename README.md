@@ -77,6 +77,46 @@ namespace N1
 
 ### Instance Reference Name in Data Type
 
+The keyword "this" is a Java language keyword that represents the current instance of the class in which it appears. It is used to access class variables and methods.
+
+Since all instance methods are virtual in Java, this can never be null.
+
+```java
+public class Point {
+    public int x = 0;
+    public int y = 0;
+        
+    //constructor
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+```
+
+***
+
+The keyword this in C# works the same way as in Java, for reference types. However, within C# value types, this has quite different semantics, being similar to an ordinary mutable variable reference, and can even occur on the left side of an assignment.
+
+One use of this in C# is to allow reference to an outer field variable within a method that contains a local variable that has the same name. In such a situation, for example, the statement ```c# var n = localAndFieldname;``` within the method will assign the type and value of the local variable localAndFieldname to n, whereas the statement ```c# var n = this.localAndFieldname;``` will assign the type and value of the outer field variable to n.
+
+```c#
+class Employee
+    {
+        private string name;
+        private string alias;
+        private decimal salary = 3000.00m;
+
+        // Constructor:
+        public Employee(string name, string alias)
+        {
+            // Use this to qualify the fields, name and alias:
+            this.name = name;
+            this.alias = alias;
+        }
+    }
+```
+
 ### Properties
 
 ### Interfaces/Protocols
