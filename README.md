@@ -13,7 +13,7 @@
 
 ### Name Spaces
 
-Packages are used to organize files or public types to avoid type conflicts. Package constructs can be mapped to a file system.
+Java uses packages. They are used to organize files or public types to avoid type conflicts. Package constructs can be mapped to a file system.
     
 ```java 
 System.Security.Cryptography.AsymmetricAlgorithm aa; //may be replaced:
@@ -39,8 +39,35 @@ Package cannot be nested. One source file can only have one package statement.
 
 ***
 
-    
+C# uses namespaces. They are used to organize programs, both as an "internal" organization system for a program, and as an "external" organization system.
 
+```c#
+System.Security.Cryptography.AsymmetricAlgorithm aa; //may be replaced:
+using System.Security.Crypography; 
+AsymmetricAlgorithm aa;
+```
+Alternatively, one could specify an alias for the the namespace, eg. :
+```c#
+using myAlias = System.Security.Crypography; //and then refer to the class with 
+myAlias.AsymmetricAlgorithm 
+```
+Additional Example:
+```c#
+namespace N1.N2
+{
+    class A {}
+    class B {}
+}
+or
+namespace N1
+{
+    namespace N2
+    {
+        class A {}
+        class B {}
+    }
+}
+```
 ### Types
 Java supports primitive and reference types. The primitive types are boolean, byte, short, char, int, long, float, and double. Reference types are all classes, including arrays and references. 
 
