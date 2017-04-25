@@ -87,6 +87,11 @@ struct Point
 }
 ```
 ### Classes
+*Definition
+*New Instances
+*Constructing/Initializing
+*Destructing/De-Initializing
+
 
 ### Instance Reference Name in Data Type
 
