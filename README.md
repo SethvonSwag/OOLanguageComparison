@@ -79,14 +79,14 @@ C# supports value and reference types. Reference types include classes, delegate
 
 Example:
 ```c#
-    struct Point
-    {
-        public int x, y;
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
+struct Point
+{
+    public int x, y;
+    public Point(int x, int y) {
+    this.x = x;
+    this.y = y;
     }
+}
 ```
 ### Classes
 
