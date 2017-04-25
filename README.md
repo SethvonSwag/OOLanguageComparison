@@ -13,6 +13,10 @@
 
 ### Name Spaces
 
+In C#, namespaces are similar to those in C++. Unlike package names in Java, a namespace is not in any way tied to the location of the source file. While it is not strictly necessary for a Java source file location to mirror its package directory structure, it is the conventional organization.
+
+***
+
 Java uses packages. They are used to organize files or public types to avoid type conflicts. Package constructs can be mapped to a file system.
     
 ```java 
