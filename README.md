@@ -42,7 +42,9 @@ Package cannot be nested. One source file can only have one package statement.
     
 
 ### Types
+Java supports primitive and reference types. The primitive types are boolean, byte, short, char, int, long, float, and double. Reference types are all classes, including arrays and references. 
 
+C# supports value and reference types. Reference types include classes, delegate, arrays, and interfaces. Value types include sbyte, byte, short, ushort, int, uint, long, float, double, bool, char, decimal, enum, and structs.
 ### Classes
 
 ### Instance Reference Name in Data Type
