@@ -12,7 +12,8 @@
 ### Unique Features
 
 ### Name Spaces
-
+In C#, namespaces are similar to those in C++. Unlike package names in Java, a namespace is not in any way tied to the location of the source file. While it is not strictly necessary for a Java source file location to mirror its package directory structure, it is the conventional organization.
+***
 Java uses packages. They are used to organize files or public types to avoid type conflicts. Package constructs can be mapped to a file system.
     
 ```java 
@@ -40,7 +41,6 @@ Package cannot be nested. One source file can only have one package statement.
 ***
 
 C# uses namespaces. They are used to organize programs, both as an "internal" organization system for a program, and as an "external" organization system.
-
 ```c#
 System.Security.Cryptography.AsymmetricAlgorithm aa; //may be replaced:
 using System.Security.Crypography; 
@@ -68,11 +68,20 @@ namespace N1
     }
 }
 ```
-
-
-
 ### Types
+Java supports primitive and reference types. The primitive types are boolean, byte, short, char, int, long, float, and double. Reference types are all classes, including arrays and references. Java does not support creating new value types.
 
+C# supports value and reference types. Reference types include classes, delegate, arrays, and interfaces. Value types include sbyte, byte, short, ushort, int, uint, long, float, double, bool, char, decimal, enum, and structs. Unlike Java, new value types can be defined using structs, i.e.:
+```c#
+struct Point
+{
+    public int x, y;
+    public Point(int x, int y) {
+    this.x = x;
+    this.y = y;
+    }
+}
+```
 ### Classes
 
 ### Instance Reference Name in Data Type
