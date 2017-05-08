@@ -238,7 +238,41 @@ public class Nissan : Car {
 ```
 
 ### Inheritance/Extension
--Devun
+
+Java allows for classes to inherit from one another. The limitation is that a class can only have one parent class that it inherits from. To inherit from a clas syou must you the ```extends``` keyword after defining the class name. A base class has access to all nonprivate members of the superclass. To talk to the superclass's constructor you must call upon it by using ```super();``` To access superclass methods simple use ```super.baseClassMethod();```.
+
+```java
+public class Rectangle {
+    public int numberOfSides;
+    
+    public Rectangle(int NumberOfSides){
+        this.numberOfSides = numberOfSides;
+    }
+}
+
+public class Square extends Rectangle {
+    public Square(){
+        super(4);
+    };
+}
+```
+
+***
+Inheritance in C# is native feature. In it you can simply create a new class, and after having defined its parent class, and use the Subclass : Superclass syntax to show that subclass inherits from superclass. Unlike Java, to reference the superclass's constructor you must you the SublcassConstructor : base() syntax. Here, base references the superclass constructor. This was done with the intention of relieving issues concerning when the superclass constructor should be called (before or after doing work in the subclass constructor), because in C# it is always called before the subclass one. It is also important to note that C# does not support multiple inheritance, but it does allow for extension.
+
+```c#
+public class Rectangle {
+    public int NumberOfSides;
+    
+    public Rectangle(int NumberOfSides){
+        this.NumberOfSides = NumberOfSides;
+    }
+}
+
+public class Square : Rectangle {
+    public Square() : base(4){};
+}
+```
 
 ### Reflection
 -Devun
