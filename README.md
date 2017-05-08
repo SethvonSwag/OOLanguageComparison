@@ -336,7 +336,35 @@ String LegalName = Name ?? "John Doe";
 ```
 
 ### Errors and Exception Handling
--Seth
+Java and C# implement a try-catch system for error handling. The system supports multiple catch blocks for multiple exception types. The more specific execptions must be caught first, otherwise a program won't compile. 
+
+Improper try-catch:
+```java
+String valueString = null;
+Double d;
+try { 
+     d = Double.parseDouble(valueString);
+} catch (Exception e) { 
+     System.out.println("Another exception has occurred.");
+} catch (NullPointerException npe) { 
+     System.out.println("valueString is null.");
+}
+```
+
+Proper try-catch:
+```Java
+String valueString = null;
+Double d;
+try { 
+     d = Double.parseDouble(valueString);
+} catch (NullPointerException npe) { 
+     System.out.println("valueString is null.");
+}
+  catch (Exception e) { 
+     System.out.println("Another exception has occurred.");
+} 
+```
+
 
 ### Lambda Expressions, Closures, or Functions as Types
 -Devun
