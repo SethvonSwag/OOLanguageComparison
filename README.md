@@ -236,6 +236,18 @@ public class Square : Rectangle {
 
 ### Reflection
 
+Reflection is supported in Java. There are methods in the reflect package that allow you to inspect a class and learn about its class, constructors, methods, fields, as well as many additional pieces of information. It is important to note that relfection can only see public members.
+
+```java
+OOIsDead burntToast = new OOIsDead();
+Class burntToaster = burntToast.getClass();
+```
+Here you could have substituted Class and getClass for constructors, methods, or fields.
+
+***
+
+In C# the same is true about reflection. A noteable difference is that C# inspects private and protected members in addition to public ones. 
+
 ### Memory Management
 
 ### Comparisons of References and Values
