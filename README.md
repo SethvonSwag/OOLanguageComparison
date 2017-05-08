@@ -9,6 +9,12 @@
 
 ### Language Purpose/ Genesis
 
+Java was designed to be a general-purpose that was concurrent, class-based, and object-oriented. It wanted to allow developers to write in one language that could be run in any environment. This would be accomplished by compiling the code into bytecode that would run on the Java Virtual Machine on any device. It was first designed in 1995 at Sun Microsystems. It took syntax cues from C and C++, but abstracted away many lower level features they had access to. 
+
+***
+
+C# was created to be a general purpose, simple, modern, object oriented programming language. It was developed by Microsoft under its .NET project. It was designed to be an improvement upon C and C++. It was also Microsoft's proprietary answer to Java to keep developers in their environment. It is evident that C# took many ideas from Java and since its release Java has done the same. While they were rather similar in the beginning, they have grown to have their own distiguished advantages and disadvantages. The name came from a similarity of C++ being and improvement on C, while C# (a reference to the musical sharp notation) was to be a step higher than before yet again. 
+
 ### Unique Features
 
 ### Name Spaces
