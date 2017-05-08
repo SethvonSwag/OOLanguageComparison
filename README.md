@@ -359,8 +359,7 @@ try {
      d = Double.parseDouble(valueString);
 } catch (NullPointerException npe) { 
      System.out.println("valueString is null.");
-}
-  catch (Exception e) { 
+} catch (Exception e) { 
      System.out.println("Another exception has occurred.");
 } 
 ```
