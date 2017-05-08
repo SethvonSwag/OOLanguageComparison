@@ -164,7 +164,40 @@ public class User {
 ```
 
 ### Interfaces/Protocols
--Devun
+
+In Java an interface is like a class, and is of a reference type. Interfaces in Java may contain methods, default method implementations, constants, static methods, as well as nested types. Methods in general, should not have concrete implementations, and should be abstract. However, in a new version of Java default implemenations have allowed developers to give methods in an interface a basic implemenation that can be used if one wishes to not implement it themselves. Java allows for a class to implement multiple interfaces at a time. In order for a class to be concrete and instantiable, it must implement all methods that do not have a default implementation.
+
+```java
+interface Animal {
+   public void eat();
+   public void travel();
+}
+public class MammalInt implements Animal {
+
+   public void eat() {
+      System.out.println("Mammal eats");
+   }
+
+   public void travel() {
+      System.out.println("Mammal travels");
+   } 
+}
+```
+
+***
+Interfaces are also a part of C#. Interfaces in C# include properties, methods, indexers and events. Nothing in the interface class can be implemented. Implementation must be left to the class that the interface is being imposed upon. It is important to note that interfaces can't be static and are understood to always be public. There is not limit to the number of interfaces that a single class can implement. 
+
+```c#
+interface Car {
+    void Drive();
+}
+
+public class Nissan : Car {
+    public void Drive(){
+        //some fancy implementation here that makes the car go fast..
+    }
+}
+```
 
 ### Inheritance/Extension
 -Devun
