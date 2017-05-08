@@ -293,7 +293,24 @@ Java manages memory with garbage collection. Objects are ready to be collected w
 In C#, the Common Language Runtime actually handles memory. Like Java though, garbage collection is used to remove unreferenced objects.
 
 ### Comparisons of References and Values
--Seth
+Java supports both comparison by reference and by value. The ```==``` operator compares two values.
+```java
+int a = 0;
+int b = 0;
+if (a == b){
+    // do something
+    }
+```
+The ```==``` operator can also be used in Java to check if two objects hold the same reference.
+   * This should not however be used to check the values inside that reference. The ```.equals()``` method should instead be used.
+   ```java 
+   String a = "hello";
+   String b = "hi";
+   if (a.equals(b)){
+    // do something
+   }
+   ```
+Like in Java, the ``` ==``` is used in C# to compare two value types. ```.equals()``` also works to compare two values. For reference types, the ```==``` operator checks if two references are the same and ```.equals()``` compares the values of the references, like Java.
 
 ### Null/Nil References
 Java uses the notion of ```null``` references. A reference is null when it contains no link to memory. Unfortunately Java has no native features to deal with the handling of null references gracefully and cleanly. Instead we must rely upon the knowledge and competence of the developer to check for it. 
