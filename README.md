@@ -275,7 +275,17 @@ public class Square : Rectangle {
 ```
 
 ### Reflection
--Devun
+Reflection is supported in Java. There are methods in the reflect package that allow you to inspect a class and learn about its class, constructors, methods, fields, as well as many additional pieces of information. It is important to note that relfection can only see public members.
+
+```java
+OOIsDead burntToast = new OOIsDead();
+Class burntToaster = burntToast.getClass();
+```
+Here you could have substituted Class and getClass for constructors, methods, or fields.
+
+***
+
+In C# the same is true about reflection. A noteable difference is that C# inspects private and protected members in addition to public ones. 
 
 ### Memory Management
 Java manages memory with garbage collection. Objects are ready to be collected when all references to that object no longer exist. As mentioned before, garbage collection is unpredictable, running periodically, so it is not possible to tell exactly when an object will be destroyed. 
@@ -306,5 +316,5 @@ In C#, the Common Language Runtime actually handles memory. Like Java though, ga
 ### Functional Programming
 -Seth
 
-### Multitheading
+### Multithreading
 -Devun
