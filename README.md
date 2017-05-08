@@ -278,7 +278,9 @@ public class Square : Rectangle {
 -Devun
 
 ### Memory Management
--Seth
+Java manages memory with garbage collection. Objects are ready to be collected when all references to that object no longer exist. As mentioned before, garbage collection is unpredictable, running periodically, so it is not possible to tell exactly when an object will be destroyed. 
+
+In C#, the Common Language Runtime actually handles memory. Like Java though, garbage collection is used to remove unreferenced objects.
 
 ### Comparisons of References and Values
 -Seth
