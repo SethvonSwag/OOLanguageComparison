@@ -97,7 +97,7 @@ modifier class ClassName {
 ```
 
 * New Instances
-    * Instantiation is also similar between the two languages. The basic syntax for that is to call the 'new' keyword followed by the name of the class. i.e. ```java new NewClass()```
+    * Instantiation is also similar between the two languages. The basic syntax for that is to call the 'new' keyword followed by the name of the class. i.e. ``` new NewClass()```
 
 * Constructing/Initializing
     * Both Java and C# use constructors to create instances. The constructors are public methods with the same name as the class. These methods however, can be overloaded to create objects with only the properties they need. 
@@ -124,7 +124,7 @@ public class Dog{
 ```
 
 * Destructing/De-Initializing
-    * Java has a garbage collector that destroys objects in an unpredictable manner. Because of the collector, there is no destructor in Java. While destructors do exist in C#, there are invoked automatically, thus do not need to be called. The syntax of the function that is called is ```c# ~ClassName()```. Notice, there is no modifier and the method takes no parameters.
+    * Java has a garbage collector that destroys objects in an unpredictable manner. Because of the collector, there is no destructor in Java. While destructors do exist in C#, there are invoked automatically, thus do not need to be called. The syntax of the function that is called is ``` ~ClassName()```. Notice, there is no modifier and the method takes no parameters.
 
 ### Instance Reference Name in Data Type
 
