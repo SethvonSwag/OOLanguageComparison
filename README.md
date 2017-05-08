@@ -280,6 +280,40 @@ String LegalName = Name ?? "John Doe";
 
 ### Lambda Expressions, Closures, or Functions as Types
 
+As of Java 8 Lambda Expressions were introduced. The way you implement them is throught he use of functional interfaces. Functional interfaces are those which are denoted with the @FunctionalInterface that contains a single abstract method in it. You can also assign a variable to lamda expressions. Here are two great examples from Dale Musser:
+
+Passing a lambda expression as a parameter:
+```java
+
+
+this.gridPane.widthProperty().addListener((ObservableValue<? extends Number> observable, Number oldValue, final Number newValue) -> {
+     drawGrid();
+});
+```
+
+Assigning a lamba expression to a variable that is passed as a parameter:
+
+```java
+ChangeListener<Number> lambdaChangeListener = (ObservableValue<? extends Number> observable, Number oldValue, final Number newValue) -> {
+     drawGrid();
+};
+
+this.gridPane.widthProperty().addListener(lambdaChangeListener);
+```
+
+***
+
+A lambda expression is an anonymous function that is used to create delegates. By using lambda expressions, you can write local functions that can be passed as arguments or returned as the value of function calls. To create a lambda expression, you specify inputs on the left side of the lambda operator ```=>```, and you put the expression on the right. For example, the lambda expression ```x => x * x``` specifies a parameter that’s named x and returns the value of x squared. 
+
+```c#
+delegate int del(int i);  
+static void Main(string[] args)  
+{  
+    del myDelegate = x => x * x;  
+    int j = myDelegate(5); //j = 25  
+}  
+```
+
 ### Implementation of Listeners and Event Handlers
 
 ### Singleton
