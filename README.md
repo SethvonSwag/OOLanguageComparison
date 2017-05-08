@@ -73,6 +73,7 @@ namespace N1
 }
 ```
 ### Types
+
 Java supports primitive and reference types. The primitive types are boolean, byte, short, char, int, long, float, and double. Reference types are all classes, including arrays and references. Java does not support creating new value types.
 
 C# supports value and reference types. Reference types include classes, delegate, arrays, and interfaces. Value types include sbyte, byte, short, ushort, int, uint, long, float, double, bool, char, decimal, enum, and structs. Unlike Java, new value types can be defined using structs, i.e.:
@@ -275,6 +276,7 @@ public class Square : Rectangle {
 ```
 
 ### Reflection
+
 Reflection is supported in Java. There are methods in the reflect package that allow you to inspect a class and learn about its class, constructors, methods, fields, as well as many additional pieces of information. It is important to note that relfection can only see public members.
 
 ```java
@@ -288,6 +290,7 @@ Here you could have substituted Class and getClass for constructors, methods, or
 In C# the same is true about reflection. A noteable difference is that C# inspects private and protected members in addition to public ones. 
 
 ### Memory Management
+
 Java manages memory with garbage collection. Objects are ready to be collected when all references to that object no longer exist. As mentioned before, garbage collection is unpredictable, running periodically, so it is not possible to tell exactly when an object will be destroyed. 
 
 In C#, the Common Language Runtime actually handles memory. Like Java though, garbage collection is used to remove unreferenced objects.
@@ -313,6 +316,7 @@ The ```==``` operator can also be used in Java to check if two objects hold the 
 Like in Java, the ``` ==``` is used in C# to compare two value types. ```.equals()``` also works to compare two values. For reference types, the ```==``` operator checks if two references are the same and ```.equals()``` compares the values of the references, like Java.
 
 ### Null/Nil References
+
 Java uses the notion of ```null``` references. A reference is null when it contains no link to memory. Unfortunately Java has no native features to deal with the handling of null references gracefully and cleanly. Instead we must rely upon the knowledge and competence of the developer to check for it. 
 
 ```java
@@ -336,6 +340,7 @@ String LegalName = Name ?? "John Doe";
 ```
 
 ### Errors and Exception Handling
+
 Java and C# implement a try-catch system for error handling. The system supports multiple catch blocks for multiple exception types. The more specific execptions must be caught first, otherwise a program won't compile. 
 
 Improper try-catch:
@@ -449,9 +454,11 @@ public sealed class Singleton
 ```
 
 ### Procedural Programming
--Devun
+
+Java does was not built specifically for the paradigm of procedural programming. However, it can be made to function similar to a natural procedural language. To do so, you would use one single class that may contain global variables for the program, use the main class for certain logic and call other methods inside that class if you chose to do so. C# can also be written procedurally in this fashion if you so desired.
 
 ### Functional Programming
+
 Functional programming is present in both Java and C# through the use of lambda expressions. As mentioned before, a lambda expression is a functional interface that contains a single abstract method in it.
 ```java
 MathOperation addition = (int a, int b) -> a + b;
