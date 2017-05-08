@@ -407,7 +407,56 @@ static void Main(string[] args)
 ```
 
 ### Implementation of Listeners and Event Handlers
--Seth
+Event handling takes place in Java through the use of ActionEvents. Listeners are used to register with a component an event will take place on. The listener must also  implement the ActionListener interface. 
+
+```java
+public class MultiListener ... implements ActionListener {
+    ...
+    //where initialization occurs:
+        button1.addActionListener(this);
+        button2.addActionListener(this);
+
+        button2.addActionListener(new Eavesdropper(bottomTextArea));
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        topTextArea.append(e.getActionCommand() + newline);
+    }
+}
+
+class Eavesdropper implements ActionListener {
+    ...
+    public void actionPerformed(ActionEvent e) {
+        myTextArea.append(e.getActionCommand() + newline);
+    }
+}
+
+```
+
+C# uses delegates to declare events. Events use the publisher-subscriber model. The publisher class contains the event definition and the delegate. The subscriber class actually handles the event. This event handler is triggered by the delegate in the publisher class. 
+
+```c#
+public delegate string MyDel(string str);
+	
+   class EventProgram {
+      event MyDel MyEvent;
+		
+      public EventProgram() {
+         this.MyEvent += new MyDel(this.WelcomeUser);
+      }
+		
+      public string WelcomeUser(string username) {
+         return "Welcome " + username;
+      }
+		
+      static void Main(string[] args) {
+         EventProgram obj1 = new EventProgram();
+         string result = obj1.MyEvent("User");
+         Console.WriteLine(result);
+      }
+
+   }
+````
 
 ### Singleton
 
