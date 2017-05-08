@@ -411,7 +411,10 @@ static void Main(string[] args)
 -Devun
 
 ### Functional Programming
--Seth
+Functional programming is present in both Java and C# through the use of lambda expressions. As mentioned before, a lambda expression is a functional interface that contains a single abstract method in it.
+```java
+MathOperation addition = (int a, int b) -> a + b;
+```
 
 ### Multithreading
 -Devun
