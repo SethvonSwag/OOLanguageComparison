@@ -407,6 +407,7 @@ static void Main(string[] args)
 ```
 
 ### Implementation of Listeners and Event Handlers
+
 Event handling takes place in Java through the use of ActionEvents. Listeners are used to register with a component an event will take place on. The listener must also  implement the ActionListener interface. 
 
 ```java
@@ -514,4 +515,24 @@ MathOperation addition = (int a, int b) -> a + b;
 ```
 
 ### Multithreading
--Devun
+
+There are two ways that Java handles the ability of threading. The first is by means of implementing the Runnable interface on the class you are using threading in. Here you must override the run() method, as it is what is called to start the thread in the first place. 
+
+```java
+public class BlackMagic implements Runnable {
+    public static void main(String args[]){ new Thread(new BlackMagic()).start(); }
+    public void run(){//do some awesome stuff}
+}
+```
+
+You can also extend the thread class instead of implementing the interface. The theory behind it is the same but you are now restricted from inheriting from any other class if that was part of your design.
+
+***
+
+C# natively has a thread class that has the Java-like start, sleep, etc. It comes with some baked in operators like ```async``` and ```await``` that make it simple to implement asynchronicity. Whether you are making a server call or computing a complex value that will take some amount of arbitrarily long time you can use the operators like below. Any method labled as async must return some sort of Task or void. It is important to note that tasks without a type does not return an actual value, but can be awaited. While void does the same but cannot be awaited.
+
+```c#
+public async Task<decimal> SomeLongLastingMethod(){
+    decimal value = await CalculatePi();
+}
+```
