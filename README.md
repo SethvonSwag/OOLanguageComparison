@@ -30,7 +30,7 @@
        * Runs in the Common Language Runtime
    * Properties are first-class
    * Listeners are first-class
-       * Classes can declare an event ```Foo```` with ```addFooListener``` and ```removeFooListener``` functionality built in
+       * Classes can declare an event ```Foo``` with ```addFooListener``` and ```removeFooListener``` functionality built in
    * Foreign methods are first-class
        * Known as extension methods
 ### Name Spaces
