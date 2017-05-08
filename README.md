@@ -254,6 +254,28 @@ In C# the same is true about reflection. A noteable difference is that C# inspec
 
 ### Null/Nil References
 
+Java uses the notion of ```null``` references. A reference is null when it contains no link to memory. Unfortunately Java has no native features to deal with the handling of null references gracefully and cleanly. Instead we must rely upon the knowledge and competence of the developer to check for it. 
+
+```java
+String name = null;
+String legalName = null;
+if(name!=null) {
+    legalName = name;
+}
+else {
+    legalName = "John Doe"
+}
+```
+
+***
+
+C# also uses the term ```null``` to represent the lack of a reference to memory. It is by default the value of all variables that utilize references. Important to note is that types line DateTime and boolean can never be set to null. C# has a way of handling nulls called null propogation. It allows you to use the syntax ```?.``` at the end of an object instead of just ```.```. This checks to see if the object you are referencing first is null or not, and if the first object is null will not try and access its member after which would normally cause and exception. This saves us time using an ```if(something == null){};``` that we all dread. Another feature of C# surrounding nulls is the idea of the null-coalescing operator ```??```. It is a conditional statement that checks for null and allows you to assign another value if the intended one is null.
+
+```c#
+String Name = null;
+String LegalName = Name ?? "John Doe";
+```
+
 ### Errors and Exception Handling
 
 ### Lambda Expressions, Closures, or Functions as Types
