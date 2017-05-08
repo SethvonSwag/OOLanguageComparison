@@ -88,6 +88,44 @@ struct Point
 ```
 ### Classes
 
+* Definition
+    * Classes are defined in the same manner in Java and C#. A modifier keyword is followed by the 'class' keyword and then the name of the class follows, i.e:
+```java
+modifier class ClassName {
+    fields and methods
+}
+```
+
+* New Instances
+    * Instantiation is also similar between the two languages. The basic syntax for that is to call the 'new' keyword followed by the name of the class. i.e. ```java new NewClass()```
+
+* Constructing/Initializing
+    * Both Java and C# use constructors to create instances. The constructors are public methods with the same name as the class. These methods however, can be overloaded to create objects with only the properties they need. 
+```java
+public class Dog{
+    public string name;
+    public int age;
+    
+    public Dog(){
+        this.name = "Fido";
+        this.age = 3;
+    }
+    
+    public Dog(string name){
+        this.name = name;
+        this.age = 3;
+    }
+    
+    public Dog(string name, int age){
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+* Destructing/De-Initializing
+    * Java has a garbage collector that destroys objects in an unpredictable manner. Because of the collector, there is no destructor in Java. While destructors do exist in C#, there are invoked automatically, thus do not need to be called. The syntax of the function that is called is ```c# ~ClassName()```. Notice, there is no modifier and the method takes no parameters.
+
 ### Instance Reference Name in Data Type
 
 The keyword "this" is a Java language keyword that represents the current instance of the class in which it appears. It is used to access class variables and methods.
