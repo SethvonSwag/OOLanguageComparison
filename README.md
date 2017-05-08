@@ -10,7 +10,29 @@
 ### Language Purpose/ Genesis
 
 ### Unique Features
-
+* Java
+   * Objects are the primary unit of composition
+       * No standalone functions
+       * Design patterns can be used to describe high level object coordination patterns
+   * Checked Exceptions
+       * Forces caller to handle expected error conditions
+   * Unicode strings
+       * Uses unicode strings rather than "bytestrings" as the main string type
+   * Documentation focus
+       * Every libray is expected to have JavaDoc documentation
+   * Compatibility focus
+       * There is a high focus on maintaining backwards compatibility
+   
+* C# 
+   * Supports partial classes and methods. This allows classes and methods to be split up for development, but combined when the code is complied, so development can take  place on the same classes/methods by multiple people.
+   * Contains assemblies (encapsulation above the namespace)
+   * Cross-language compatibility is first-class
+       * Runs in the Common Language Runtime
+   * Properties are first-class
+   * Listeners are first-class
+       * Classes can declare an event ```Foo```` with ```addFooListener``` and ```removeFooListener``` functionality built in
+   * Foreign methods are first-class
+       * Known as extension methods
 ### Name Spaces
 
 In C#, namespaces are similar to those in C++. Unlike package names in Java, a namespace is not in any way tied to the location of the source file. While it is not strictly necessary for a Java source file location to mirror its package directory structure, it is the conventional organization.
