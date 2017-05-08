@@ -361,6 +361,8 @@ public sealed class Singleton
 ```
 ### Procedural Programming
 
+Java does was not built specifically for the paradigm of procedural programming. However, it can be made to function similar to a natural procedural language. To do so, you would use one single class that may contain global variables for the program, use the main class for certain logic and call other methods inside that class if you chose to do so. C# can also be written procedurally in this fashion if you so desired.
+
 ### Functional Programming
 
 ### Multitheading
