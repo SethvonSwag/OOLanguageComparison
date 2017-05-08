@@ -318,6 +318,47 @@ static void Main(string[] args)
 
 ### Singleton
 
+Java supports the creation of Singletons. It is not a native feature, but there are ways to create them. The below example delegates the task to the JVM for static lazy instantiation that makes it thread safe as well.
+
+```java
+public class Something {
+    private Something() {
+    }
+
+    private static class LazyHolder {
+            public static final Something INSTANCE = new Something();
+    }
+
+    public static Something getInstance() {
+            return LazyHolder.INSTANCE;
+    }
+}
+```
+
+***
+
+C# is able to make Singletons as well. Here is an example of one that is thread safe.
+```c#
+public sealed class Singleton
+{
+   private static volatile Singleton instance;
+   private static object syncRoot = new Object();
+
+   private Singleton() {}
+
+   public static Singleton Instance {
+      get {
+         if (instance == null)  {
+            lock (syncRoot)  {
+               if (instance == null) 
+                  instance = new Singleton();
+            }
+         }
+         return instance;
+      }
+   }
+}
+```
 ### Procedural Programming
 
 ### Functional Programming
